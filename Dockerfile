@@ -7,12 +7,10 @@ RUN pip install --no-cache-dir uv
 # Set working directory
 WORKDIR /app
 
-# Copy project files
+# Copy project files that are always present
 COPY pyproject.toml uv.lock ./
 COPY src ./src
 COPY main.py ./
-COPY credentials.json ./ 2>/dev/null || true  # Optional copy, won't fail if file doesn't exist
-COPY .env ./ 2>/dev/null || true  # Optional copy, won't fail if file doesn't exist
 
 # Install project dependencies using uv
 RUN uv sync --no-dev
