@@ -1,0 +1,21 @@
+services:
+  project-dashboard:
+    build: .
+    container_name: project-dashboard
+    restart: unless-stopped
+    environment:
+      - GOOGLE_SHEET_ID=${GOOGLE_SHEET_ID}
+      - CREDENTIALS=${CREDENTIALS:-credentials.json}
+      - UPDATE_INTERVAL=${UPDATE_INTERVAL:-10}
+      - MANAGEMENT_SHEET_NAME=${MANAGEMENT_SHEET_NAME:-Quản Lý}
+    volumes:
+      - ./credentials.json:/app/credentials.json:ro
+      - ./.env:/app/.env:ro
+    env_file:
+      - .env
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
