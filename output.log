@@ -1,0 +1,12 @@
+
+Found 3 sheets.
+Reading sheet: Quản Lý
+  - Headers/First Row: ['Tên Công Việc', 'Dự Án', 'Loại Công Việc', 'Phụ Trách', 'Trạng Thái', 'Ngày Bắt Đầu', 'Ngày Kết Thúc', 'Ngày Hoàn Thành', 'Link Sản Phẩm', 'Ghi Chú', '', 'CÁC BẠN KHÔNG THAO TÁC Ở KHU VỰC NÀY', '', '', '', '', '', '', '', '', '', '']
+------------------------------
+Reading sheet: Bling Kim
+  - Headers/First Row: ['Tên Công Việc', 'Loại Công Việc', 'Phụ Trách', 'Trạng Thái', 'Ngày Bắt Đầu', 'Ngày Kết Thúc', 'Ngày Hoàn Thành', 'Link Sản Phẩm', 'Ghi Chú']
+------------------------------
+Reading sheet: Cô Quỳnh Real
+  - Headers/First Row: ['Tên Công Việc', 'Loại Công Việc', 'Phụ Trách', 'Trạng Thái', 'Ngày Bắt Đầu', 'Ngày Kết Thúc', 'Ngày Hoàn Thành', 'Link Sản Phẩm', 'Ghi Chú']
+------------------------------
+
