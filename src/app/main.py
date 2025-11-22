@@ -16,8 +16,12 @@ from src.utils import load_credentials
 from .config import Config
 from .sheets_utils import find_column_index, ensure_worksheet_exists
 
-# Set up logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+import os
+
+# Set up logging with level configurable via environment variable
+log_level_str = os.getenv("LOG_LEVEL", "INFO").upper()
+log_level = getattr(logging, log_level_str, logging.INFO)
+logging.basicConfig(level=log_level, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 class ProjectDashboard:
