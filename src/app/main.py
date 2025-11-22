@@ -12,11 +12,13 @@ from typing import Dict, List, Any
 
 import gspread
 
+# Load environment variables from .env file
+from dotenv import load_dotenv
+load_dotenv()
+
 from src.utils import load_credentials
 from .config import Config
 from .sheets_utils import find_column_index, ensure_worksheet_exists
-
-import os
 
 # Set up logging with level configurable via environment variable
 log_level_str = os.getenv("LOG_LEVEL", "INFO").upper()

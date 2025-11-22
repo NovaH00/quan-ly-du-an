@@ -1,9 +1,6 @@
 import os
 import json
 
-from dotenv import load_dotenv
-load_dotenv()
-
 CREDENTIALS = os.getenv("CREDENTIALS", default=None)
 if CREDENTIALS is None:
     raise EnvironmentError("Could not found CREDENTIALS environment variable. Please set it")
